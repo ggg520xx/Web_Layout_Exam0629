@@ -1,0 +1,179 @@
+// ------------------------------------------------------
+// banner 背景用包裹的方法
+
+.banner {
+  // margin-top: 30px;
+  background-image: url("../../images/index/banner.png");
+  @include backdrop(center, no-repeat, cover);
+  height: 900px;
+
+  .index_info {
+    // width: 500px;
+    height: 300px;
+
+    // border: 1px solid red;
+    position: absolute;
+    /* 上層已預設是relative了 */
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-style: italic;
+      color: $shiro;
+      // border: 1px solid blue;
+      font-size: 24px;
+    }
+
+    h1 {
+      color: $shiro;
+
+      font-style: italic;
+      font-size: 80px;
+      font-weight: 600;
+      // border: 1px solid blue;
+    }
+
+    p {
+      font-style: italic;
+      font-size: 24px;
+      color: $shiro;
+    }
+
+    img {
+      height: 60px;
+      width: 60px;
+      // border: 1px solid blue;
+    }
+  }
+}
+
+.about_zone {
+  // border: 1px solid blue;
+  text-align: center;
+  // padding-top: 5rem;
+
+  max-width: 450px;
+  margin: 0 auto;
+
+  @include exsmall {
+    padding: 10px;
+  }
+
+  h2 {
+    font-style: italic;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+  }
+
+  img {
+    margin-top: 30px;
+  }
+  p {
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 3px;
+  }
+
+  ul li {
+    width: 100%;
+    margin: 0 auto;
+
+    // border: 1px solid blue;
+
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 900;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: darken($color: red, $amount: 20%);
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+  }
+}
+
+.brand_zone {
+  // height: 100vh;
+  background-color: $kuro;
+
+  margin-top: 5rem;
+
+  // border: 1px solid blue;
+  text-align: center;
+
+  h2 {
+    font-style: italic;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+
+    color: $shiro;
+
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 20px;
+    color: $shiro;
+    span {
+      font-style: italic;
+    }
+  }
+  .brand_img {
+    display: flex;
+    justify-content: space-around;
+    // flex-direction: column;
+    // justify-content: space-around;
+
+    @include layout_fix {
+      flex-wrap: wrap;
+
+      img {
+        margin-top: 3.5rem;
+      }
+    }
+  }
+}
+
+.other_work {
+  // border: 1px solid blue;
+  text-align: center;
+  margin-top: 5rem;
+  margin: 0 auto;
+
+  h2 {
+    font-style: italic;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+  }
+
+  p {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 5px;
+    // width: 226px;
+  }
+
+  .row {
+    p {
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+  }
+}
